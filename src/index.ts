@@ -26,7 +26,7 @@ const limiter = rateLimit({
 app.use(limiter);
 app.use(helmet());
 app.use(cors({
-  origin: ["http://localhost:3000", "http://localhost:8000"],
+  origin: ["http://localhost:3000", "http://localhost:8000","https://signal-chat-app.vercel.app"],
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization", "Accept"],
   credentials: true
@@ -34,7 +34,7 @@ app.use(cors({
 
 // Handle preflight requests
 app.options('*', cors({
-  origin: ["http://localhost:3000", "http://localhost:8000"],
+  origin: ["http://localhost:3000", "http://localhost:8000","https://signal-chat-app.vercel.app"],
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization", "Accept"],
   credentials: true
